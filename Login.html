@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><title>VERIDIS NutriScan - Authentication &amp; Telemetry Gateway</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary":"#ffefe0","tertiary-fixed-dim":"#ffb95f","inverse-on-surface":"#2b3139","surface-dim":"#0e141b","surface-variant":"#2f353d","surface":"#0e141b","surface-container-low":"#161c23","error":"#ffb4ab","primary-container":"#00f2a5","inverse-surface":"#dde3ed","secondary-fixed":"#acedff","surface-container":"#1a2027","background":"#0e141b","on-secondary-fixed":"#001f26","on-primary":"#003823","primary-fixed-dim":"#00e29a","surface-container-high":"#242a32","secondary-container":"#03b5d3","on-secondary-fixed-variant":"#004e5c","on-tertiary-fixed":"#2a1700","on-tertiary-container":"#825100","on-error":"#690005","on-error-container":"#ffdad6","outline":"#849589","on-primary-fixed":"#002113","primary-fixed":"#4affb4","tertiary-fixed":"#ffddb8","inverse-primary":"#006c47","secondary":"#4cd7f6","primary":"#c0ffdb","on-primary-fixed-variant":"#005235","surface-container-highest":"#2f353d","on-tertiary-fixed-variant":"#653e00","on-tertiary":"#472a00","surface-tint":"#00e29a","tertiary-container":"#ffcc90","on-surface":"#dde3ed","on-secondary-container":"#00424e","outline-variant":"#3b4a41","on-surface-variant":"#b9cbbe","on-primary-container":"#006945","on-secondary":"#003640","secondary-fixed-dim":"#4cd7f6","surface-bright":"#343a42","on-background":"#dde3ed","surface-container-lowest":"#090f16","error-container":"#93000a"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"2rem","margin-mobile":"1rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter":"1.5rem","space-xl":"2.5rem","space-md":"1rem","gutter-mobile":"0.75rem","space-sm":"0.5rem"},fontFamily:{"data-display-md":["JetBrains Mono"],"label-mono-xs":["JetBrains Mono"],"body-md":["Inter"],"label-mono":["JetBrains Mono"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"data-display-lg":["JetBrains Mono"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-xl":["Plus Jakarta Sans"]},fontSize:{"data-display-md":["24px",{"lineHeight":"28px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-mono-xs":["10px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"label-mono":["12px",{"lineHeight":"16px","letterSpacing":"0.06em","fontWeight":"500"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"600"}],"data-display-lg":["40px",{"lineHeight":"44px","letterSpacing":"-0.04em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-background min-h-screen selection:bg-primary-container selection:text-on-primary-container relative overflow-x-hidden flex flex-col justify-center items-center"><main class="w-full flex-1 flex flex-col justify-center items-center"><div class="flex flex-col w-full items-center justify-center py-6 px-4 sm:px-6 relative selection:bg-primary-container selection:text-on-primary-container">
+<!-- Subtle Ambient Atmospheric Glow Spots -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-gradient-to-b from-primary-container/10 via-secondary-container/5 to-transparent blur-[110px] pointer-events-none"></div>
+<div class="absolute -bottom-24 left-1/4 w-[480px] h-[240px] bg-gradient-to-tr from-secondary/5 via-primary-fixed-dim/5 to-transparent blur-[90px] pointer-events-none"></div>
+<!-- Gateway Main Container -->
+<div class="w-full max-w-xl relative z-10 flex flex-col gap-space-lg">
+<!-- Top Telemetry Protocol Ribbon -->
+<div class="flex items-center justify-between px-space-xs text-on-surface-variant">
+<a class="inline-flex items-center gap-space-xs font-label-mono text-label-mono text-outline hover:text-primary-container transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+<span>VERIDIS.BIO // MAIN_PORTAL</span>
+</a>
+<div class="flex items-center gap-2">
+<span class="inline-flex relative h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span>
+</span>
+<span class="font-label-mono-xs text-label-mono-xs uppercase tracking-wider text-primary-fixed-dim">GATEWAY ONLINE // 99.98%</span>
+</div>
+</div>
+<!-- Central Obsidian Terminal Card -->
+<div class="w-full bg-surface-container-lowest/90 backdrop-blur-2xl rounded-xl shadow-2xl p-6 sm:p-10 relative overflow-hidden flex flex-col gap-space-lg">
+<!-- Luminous Top Accent Line -->
+<div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary-container/80 to-transparent"></div>
+<!-- Card Diagnostic Header -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<!-- Monospace Technical Classification -->
+<div class="flex items-center gap-2 font-label-mono-xs text-label-mono-xs text-outline uppercase">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary-fixed-dim">NODE_ID: #VRD-9402</span>
+<span>CLINICAL TELEMETRY PORTAL v3.4</span>
+</div>
+<!-- Micro Encryption Status Badge -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-primary-fixed-dim font-label-mono-xs text-label-mono-xs">
+<span class="material-symbols-outlined text-xs text-primary-container" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span>256-BIT BIO-ENCRYPTION</span>
+</div>
+</div>
+<!-- Brand Identity Lockup -->
+<div class="mt-2 flex items-center justify-between">
+<div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shadow-inner">
+<span class="material-symbols-outlined text-xl">biotech</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">VERIDIS <span class="text-primary-container">NutriScan</span></h1>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">High-Fidelity Metabolic Intelligence &amp; Molecular Profiling Vault</p>
+</div>
+<!-- Radial Status Indicator Micro-HUD -->
+<div class="hidden sm:flex flex-col items-end">
+<div class="font-label-mono-xs text-label-mono-xs text-outline">LATENCY</div>
+<div class="font-label-mono text-label-mono text-secondary-fixed-dim flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">bolt</span> 14ms
+            </div>
+</div>
+</div>
+</div>
+<!-- Segmented Terminal Mode Switcher -->
+<div class="grid grid-cols-2 p-1 rounded-lg bg-surface-container-high">
+<button class="py-2.5 px-4 rounded-md font-label-mono text-label-mono transition-all duration-200 bg-surface-container-lowest text-primary-container shadow-md flex items-center justify-center gap-2" id="tab-signin">
+<span class="material-symbols-outlined text-sm">vpn_key</span>
+<span>SIGN IN TO VAULT</span>
+</button>
+<button class="py-2.5 px-4 rounded-md font-label-mono text-label-mono transition-all duration-200 text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-2" id="tab-signup">
+<span class="material-symbols-outlined text-sm">person_add</span>
+<span>INITIALIZE ACCOUNT</span>
+</button>
+</div>
+<!-- Primary Credentials Form -->
+<form class="flex flex-col gap- space-md" onsubmit="event.preventDefault(); triggerAuth();">
+<!-- Field 1: Biometric ID / Email -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-mono text-label-mono text-on-surface uppercase tracking-wider flex items-center gap-1.5" for="clinical-id">
+<span>BIOMETRIC IDENTIFIER // CLINICAL EMAIL</span>
+</label>
+<span class="font-label-mono-xs text-label-mono-xs text-outline">SECURE FIELD</span>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline group-focus-within:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-lg">fingerprint</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-high text-on-surface rounded-lg font-body-md text-body-md placeholder:text-outline-variant focus:outline-none focus:bg-surface-container-highest transition-all duration-200" id="clinical-id" placeholder="e.g. bio-id@veridis-labs.bio" required="" type="text" value="dr.elena.vance@veridis-labs.bio"/>
+</div>
+</div>
+<!-- Field 2: Cryptographic Password / Passkey -->
+<div class="flex flex-col gap-1.5 mt-2">
+<div class="flex justify-between items-center">
+<label class="font-label-mono text-label-mono text-on-surface uppercase tracking-wider" for="passkey-input">
+<span>ACCESS PASSKEY // CRYPTOGRAPHIC KEY</span>
+</label>
+<a class="font-label-mono-xs text-label-mono-xs text-secondary hover:text-primary-container transition-colors" href="#">FORGOT PASSKEY?</a>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline group-focus-within:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-lg">terminal</span>
+</div>
+<input class="w-full pl-10 pr-11 py-3 bg-surface-container-high text-on-surface rounded-lg font-body-md text-body-md placeholder:text-outline-variant focus:outline-none focus:bg-surface-container-highest transition-all duration-200" id="passkey-input" placeholder="Enter cryptographic passkey" required="" type="password" value="••••••••••••••••••••"/>
+<button class="absolute inset-y-0 right-0 pr-3 flex items-center text-outline hover:text-on-surface transition-colors" onclick="togglePasskeyVisibility()" title="Toggle visibility" type="button">
+<span class="material-symbols-outlined text-lg" id="passkey-toggle-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Primary Action Cyber Trigger -->
+<div class="mt-4 flex flex-col gap-3">
+<button class="w-full py-3.5 px-6 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-2 hover:opacity-95 transition-all duration-200 transform active:scale-[0.99] shadow-lg shadow-primary-container/20" id="auth-submit-btn" type="submit">
+<span class="material-symbols-outlined text-xl">encrypted</span>
+<span id="submit-label">AUTHORIZE VAULT SESSION</span>
+</button>
+<!-- Status Indicator Feed (Interactive feedback) -->
+<div class="hidden px-3 py-2 rounded bg-surface-container-high flex items-center justify-between font-label-mono-xs text-label-mono-xs text-primary-fixed-dim" id="auth-status-bar">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs animate-spin">sync</span>
+<span>SYNCHRONIZING ZERO-KNOWLEDGE PROOF...</span>
+</span>
+<span class="text-secondary-fixed">TLS 1.3 OK</span>
+</div>
+</div>
+</form>
+<!-- Rapid Optical / Biometric Access Partition -->
+<div class="flex items-center gap-3">
+<div class="flex-1 h-[1px] bg-surface-container-high"></div>
+<span class="font-label-mono-xs text-label-mono-xs text-outline uppercase tracking-wider">HARDWARE ATTENUATION</span>
+<div class="flex-1 h-[1px] bg-surface-container-high"></div>
+</div>
+<!-- Hardware & Biometric SSO Stack -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- WebAuthn / FaceID Biometric Button -->
+<button class="flex items-center justify-center gap-2.5 px-4 py-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest transition-colors text-on-surface font-body-md text-body-md group" onclick="simulateBiometricAuth()" type="button">
+<span class="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform text-xl">fitbit_hourly_activity</span>
+<div class="flex flex-col text-left">
+<span class="font-label-mono text-label-mono leading-none">PASSKEY / FACEID</span>
+<span class="font-label-mono-xs text-label-mono-xs text-outline leading-none mt-1">FIDO2 SECURE</span>
+</div>
+</button>
+<!-- Institutional Single Sign-On -->
+<button class="flex items-center justify-center gap-2.5 px-4 py-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest transition-colors text-on-surface font-body-md text-body-md group" type="button">
+<span class="material-symbols-outlined text-primary-fixed group-hover:scale-110 transition-transform text-xl">hub</span>
+<div class="flex flex-col text-left">
+<span class="font-label-mono text-label-mono leading-none">LAB RESEARCH SSO</span>
+<span class="font-label-mono-xs text-label-mono-xs text-outline leading-none mt-1">ORCID // INSTITUTION</span>
+</div>
+</button>
+</div>
+<!-- Security & Compliance Telemetry Strip -->
+<div class="mt-2 pt-4 flex flex-col gap-2 bg-surface-container-low/60 rounded-lg p-3 text-on-surface-variant">
+<div class="flex items-center justify-between text-outline font-label-mono-xs text-label-mono-xs flex-wrap gap-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary-container" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span>ISO/IEC 27001 AUDITED</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span>HIPAA BIO-VAULT COMPLIANT</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary-container" style="font-variation-settings: 'FILL' 1;">visibility_off</span>
+<span>ZERO-KNOWLEDGE TRACKING</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Supplementary Gateway Links -->
+<div class="flex items-center justify-between px-2 flex-wrap gap-3 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-outline">corporate_fare</span>
+<span>Need clinical cohort access?</span>
+<a class="text-primary-container hover:underline font-medium" href="#">Request Academic Trial</a>
+</div>
+<div class="flex items-center gap-4 text-outline font-label-mono-xs text-label-mono-xs">
+<a class="hover:text-on-surface transition-colors" href="#">SECURITY DISCLOSURE</a>
+<span>•</span>
+<a class="hover:text-on-surface transition-colors" href="#">TELEMETRY DOCS</a>
+<span>•</span>
+<span class="text-primary-fixed-dim">LATENCY: 14MS</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function togglePasskeyVisibility() {
+    const input = document.getElementById('passkey-input');
+    const icon = document.getElementById('passkey-toggle-icon');
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  function triggerAuth() {
+    const statusBar = document.getElementById('auth-status-bar');
+    const submitBtn = document.getElementById('auth-submit-btn');
+    const label = document.getElementById('submit-label');
+    
+    statusBar.classList.remove('hidden');
+    submitBtn.classList.add('opacity-80', 'pointer-events-none');
+    label.textContent = 'VERIFYING SIGNATURE...';
+
+    setTimeout(() => {
+      statusBar.innerHTML = `
+        <span class="flex items-center gap-1.5 text-primary-container">
+          <span class="material-symbols-outlined text-xs">check_circle</span>
+          <span>SESSION AUTHORIZED // REDIRECTING TO TELEMETRY STREAM</span>
+        </span>
+        <span class="text-primary-container">PORT 443 [OK]</span>
+      `;
+      label.textContent = 'ACCESS GRANTED';
+      submitBtn.classList.remove('opacity-80');
+    }, 1200);
+  }
+
+  function simulateBiometricAuth() {
+    const statusBar = document.getElementById('auth-status-bar');
+    statusBar.classList.remove('hidden');
+    statusBar.innerHTML = `
+      <span class="flex items-center gap-1.5 text-secondary">
+        <span class="material-symbols-outlined text-xs animate-spin">fingerprint</span>
+        <span>AWAITING WEBAUTHN BIO-TOUCH SENSOR PIN...</span>
+      </span>
+      <span class="text-secondary">FIDO2 ACTIVE</span>
+    `;
+
+    setTimeout(() => {
+      statusBar.innerHTML = `
+        <span class="flex items-center gap-1.5 text-primary-container">
+          <span class="material-symbols-outlined text-xs">verified</span>
+          <span>BIOMETRIC HASH CONFIRMED: DR. E. VANCE</span>
+        </span>
+        <span class="text-primary-container">VAULT READY</span>
+      `;
+    }, 1400);
+  }
+
+  // Tab toggling micro-interaction
+  const tabSignin = document.getElementById('tab-signin');
+  const tabSignup = document.getElementById('tab-signup');
+  const submitLabel = document.getElementById('submit-label');
+
+  tabSignin.addEventListener('click', () => {
+    tabSignin.classList.add('bg-surface-container-lowest', 'text-primary-container', 'shadow-md');
+    tabSignin.classList.remove('text-on-surface-variant');
+    tabSignup.classList.remove('bg-surface-container-lowest', 'text-primary-container', 'shadow-md');
+    tabSignup.classList.add('text-on-surface-variant');
+    submitLabel.textContent = 'AUTHORIZE VAULT SESSION';
+  });
+
+  tabSignup.addEventListener('click', () => {
+    tabSignup.classList.add('bg-surface-container-lowest', 'text-primary-container', 'shadow-md');
+    tabSignup.classList.remove('text-on-surface-variant');
+    tabSignin.classList.remove('bg-surface-container-lowest', 'text-primary-container', 'shadow-md');
+    tabSignin.classList.add('text-on-surface-variant');
+    submitLabel.textContent = 'INITIALIZE BIO-KEY & REGISTER';
+  });
+</script></main></body></html>
