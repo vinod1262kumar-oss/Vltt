@@ -38,7 +38,7 @@
     {
       "id": "home",
       "path": "/",
-      "file": "Index.html",
+      "file": "index.html",
       "title": "VERIDIS NutriScan - Hyperspectral Nutrition Scanner",
       "description": "Deploy real-time molecular food forensics directly from your terminal."
     },
